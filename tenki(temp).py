@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
-df = pd.read_csv("C:\\Alex frfr\\programming\\analysis\\2026_01_A\\tenki(temp).csv")
+df = pd.read_csv("tenki(temp).csv")
 date = df["date"].tolist()
 data = df["Avg"].tolist()
 plt.plot(date, data)
