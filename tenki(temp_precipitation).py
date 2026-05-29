@@ -1,6 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 from matplotlib.ticker import MaxNLocator
+start_date = pd.Timestamp("01-01-2025")
+end_date = pd.Timestamp("31-12-2025")
 temp_df = pd.read_csv(
     "tenki(temp).csv"
 )
@@ -23,11 +26,13 @@ df = pd.merge(
     on="date",
     how="inner"
 )
-fig, ax1 = plt.subplots(figsize=(12, 5))
+fig, ax1 = plt.subplots(figsize=(12, 6))
 ax1.plot(df["date"], df["Avg"], label="Average Temperature")
 ax1.set_xlabel("Date")
 ax1.set_ylabel("Average Temperature [°C]")
 ax1.tick_params(axis="x", labelrotation=67)
+ax1.set_xlim(start_date, end_date)
+ax1.xaxis.set_major_formatter(mdates.DateFormatter('%d-%m-%Y')) 
 ax1.xaxis.set_major_locator(MaxNLocator(nbins=12))
 ax2 = ax1.twinx()
 ax2.bar(df["date"], df["precip"], alpha=0.3, label="Precipitation")
