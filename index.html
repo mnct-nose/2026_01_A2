@@ -1,31 +1,169 @@
-<html>
-    <head>
-        <title>舞鶴市の天気</title>
-    </head>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>舞鶴市の天気</title>
+    <style>
+        /* --- SDGs×サステナブルWebデザイン（確定版） --- */
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Segoe UI', Roboto, 'Hiragino Sans', sans-serif;
+            background-color: #f0f7f4; /* 自然を感じるごく薄いミントブルー */
+            color: #2d3748;
+            line-height: 1.9;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        /* メインの読み物枠 */
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 50px 60px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(44, 122, 123, 0.06); 
+        }
+
+        /* サイトの最上部に配置したSDGsカラーバー（気候・海・陸の目標カラー） */
+        .sdgs-bar {
+            height: 6px;
+            background: linear-gradient(90deg, #26bde2 0%, #4c9f38 50%, #00689d 100%);
+            margin: -50px -60px 40px -60px;
+            border-radius: 16px 16px 0 0;
+        }
+
+        /* メインタイトル */
+        h2:first-of-type {
+            font-size: 34px;
+            font-weight: 800;
+            color: #005689; /* ターゲットブルー */
+            text-align: center;
+            margin-bottom: 35px;
+            letter-spacing: 0.05em;
+        }
+
+        /* 各章の中見出し */
+        h2 {
+            font-size: 22px;
+            color: #004b75;
+            margin-top: 55px;
+            margin-bottom: 25px;
+            padding-bottom: 8px;
+            background: linear-gradient(transparent 90%, #bee3f8 90%, #bee3f8 100%); /* さわやかな水色の下線 */
+        }
+
+        /* 参考文献の見出しだけ少し小さく控えめに */
+        .reference-title {
+            font-size: 18px;
+            color: #4a5568;
+            margin-top: 60px;
+            background: none;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* 本文スタイル */
+        p {
+            font-size: 16px;
+            color: #4a5568;
+            text-align: justify;
+            margin-bottom: 24px;
+        }
+        
+        /* 最初の導入文章を囲むハイライトボックス */
+        h2 + p:first-of-type {
+            font-size: 17px;
+            color: #2d3748;
+            background-color: #ebf8ff; 
+            padding: 20px 25px;
+            border-radius: 8px;
+            border-left: 4px solid #3182ce;
+        }
+
+        /* グラフを中央寄せで綺麗に見せるボックス */
+        .figure-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px 0;
+            background: #f7fafc;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        /* 図1、図2、図3のキャプション（バッジ風デザイン） */
+        .caption {
+            font-size: 14px !important;
+            color: #4a5568;
+            margin-top: 15px !important;
+            margin-bottom: 0 !important;
+            font-weight: 600;
+            background-color: #e2e8f0;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        /* リンクの色設定 */
+        a {
+            color: #3182ce;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #2b6cb0;
+        }
+    </style>
+</head>
 <body>
+
+<div class="container">
+    <div class="sdgs-bar"></div>
+
     <h2>舞鶴市の天気</h2>
     <p>地球温暖化が騒がれる昨今、地球の気候の変化が注目されている。そこで私たちは気候に対しての関心を深めるために、年間の気温の変化と降水量にはどのような関係があるのか調べることにした。本サイトでは、2025年の１年間の舞鶴市の気温、降水量を調査し、その関係を考察する。</p>
+    
     <h2>2025年舞鶴市の気温</h2>
     <p>舞鶴の気温の変化は図1に示す</p>
-    <img src="tenki(temp).png" width="500">
-    <p style="font-size: 14px; margin-top: 5px;">図1：2025年 舞鶴市の気温の推移</p>
-    <p></p>
+    
+    <div class="figure-box">
+        <img src="tenki(temp).png" style="width: 500px;">
+        <p class="caption">図1：2025年 舞鶴市の気温の推移</p>
+    </div>
+    
     <p>図1より、８月が30度をこえる日もあり１年を通してもっとも暑い、５～６月が最も気温の変化が激しい、９～１月にかけては、気温は緩やかに下がっていき、短期間で大きく気温が変化することはなかった。</p>
+    
     <h2>2025年舞鶴市の降水量</h2>
     <p>舞鶴市の降水量の変化は図2に示す</p>
-    <img src="tenki(precipitation).png" width="700">
-    <p style="font-size: 14px; margin-top: 5px;">図2：2025年 舞鶴市の降水の推移</p>
+    
+    <div class="figure-box">
+        <img src="tenki(precipitation).png" style="width: 700px;">
+        <p class="caption">図2：2025年 舞鶴市の降水の推移</p>
+    </div>
+    
     <p>雨の日が多いのは２～３月,９～１１月だった。降水量が最も多い日は６～８月に集中していた。全体を通して降水量が少ない日がある時期は雨の日が多く、降水量が多い日がある時期は雨の日自体は少ないが集中して大量の雨が降る傾向にあった。</p>
+    
     <h2>気温、降水量の関係を考察する</h2>
     <p>舞鶴市の気温の変化と降水量の変化を合わせたグラフを図3に示す</p>
-    <img src="temp&precipitation.png.png" width="700">
-    <p style="font-size: 14px; margin-top: 5px;">図3：2025年 舞鶴市の気温、降水の推移</p>
-    <p>図のグラフでは降水量が観測された日のうち、気温の傾きが負になった日を赤くマークした。
-図より、降水量と気温には直接の相関はないが、降水した日のうち、降水量が観測された日に気温の傾きが負になっている部分が大多数を占めるため、降水によって気温は低下すると考える。</p>
-    <h2>参考文献</h2>
-    <p>
-    ・<a href="https://www.data.jma.go.jp/risk/obsdl/" target="_blank">気象庁：過去の気象データ</a>
+    
+    <div class="figure-box">
+        <img src="temp&precipitation.png.png" style="width: 700px;">
+        <p class="caption">図3：2025年 舞鶴市の気温、降水の推移</p>
+    </div>
+    
+    <p>図のグラフでは降水量が観測された日のうち、気温の傾きが負になった日を赤くマークした。図より、降水量と気温には直接の相関はないが、降水した日のうち、降水量が観測された日に気温の傾きが負になっている部分が大多数を占めるため、降水によって気温は低下すると考える。</p>
+    
+    <h2 class="reference-title">参考文献</h2>
+    <p style="font-size: 14px;">
+        ・<a href="https://www.data.jma.go.jp/risk/obsdl/" target="_blank">気象庁：過去の気象データ</a>
     </p>
+
+</div>
 
 </body>
 </html>
