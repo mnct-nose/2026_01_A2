@@ -14,5 +14,5 @@ plt.ylabel('Average Tempurature [°C]')
 plt.title('Daily Average Tempurature')
 
 # function to show the plot
-plt.show()
 plt.savefig("tenki(temp).png")
+plt.show()
